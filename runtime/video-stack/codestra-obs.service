@@ -1,0 +1,23 @@
+[Unit]
+Description=Codestra headless OBS with obs-websocket
+After=network.target
+
+[Service]
+Type=simple
+User=videoctl
+Group=videoctl
+Environment=OBS_HOME=/var/lib/codestra-obs
+EnvironmentFile=/etc/codestra-video/obs.env
+ExecStart=/opt/codestra-video/obs/start-obs-headless.sh
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=strict
+ReadWritePaths=/var/lib/codestra-obs /srv/codestra-video
+IPAddressDeny=any
+IPAddressAllow=localhost
+
+[Install]
+WantedBy=multi-user.target
