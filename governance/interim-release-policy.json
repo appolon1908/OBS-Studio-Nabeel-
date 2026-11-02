@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "policy_kind": "source_merge",
+  "repository": "appolon1908/OBS-Studio-Nabeel-",
+  "authorization_date": "2026-11-02",
+  "required_checks": [
+    {
+      "context": "obs-source-validation",
+      "integration_id": 15368,
+      "workflow": ".github/workflows/obs-source-ci.yml"
+    },
+    {
+      "context": "obs-source-secrets",
+      "integration_id": 15368,
+      "workflow": ".github/workflows/obs-source-ci.yml"
+    }
+  ],
+  "replaces_contexts": [
+    "codestra-control-plane",
+    "codestra/control-plane"
+  ],
+  "preserve": [
+    "other_required_checks",
+    "review_requirements",
+    "ref_conditions",
+    "bypass_actors",
+    "enforcement",
+    "force_push_protection",
+    "deletion_protection",
+    "deployment_authority"
+  ],
+  "production_activation_authorized": false,
+  "note": "GitHub rulesets remain the enforcement authority. Hosted synthetic source tests do not certify hardware, live recording, streaming, runtime health or deployment. The original dedicated runner workflow is preserved; other independently required checks remain enforced."
+}
