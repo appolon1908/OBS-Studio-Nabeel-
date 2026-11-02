@@ -2,6 +2,7 @@ name: NABEEL integration CI
 
 on:
   pull_request:
+    branches: [main]
   push:
     branches:
       - "pr/nabeel-*"
