@@ -1,0 +1,22 @@
+[General]
+Name=NABEEL Station 1080p60
+
+[Video]
+BaseCX=1920
+BaseCY=1080
+OutputCX=1920
+OutputCY=1080
+FPSCommon=60
+
+[Output]
+Mode=Advanced
+
+[AdvOut]
+RecType=Standard
+RecFormat=mkv
+RecTracks=1
+RecFileNameWithoutSpace=true
+RecRB=false
+
+[SimpleOutput]
+RecFormat2=mkv
